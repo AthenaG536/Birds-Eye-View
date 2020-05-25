@@ -28,6 +28,7 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.android.volley;
 import com.google.android.gms.tasks.Task;
 
 public class Birding extends AppCompatActivity {
@@ -45,6 +46,7 @@ public class Birding extends AppCompatActivity {
         conLayoutTop =findViewById(R.id.consLayoutTop);
         conLayoutBottom = findViewById(R.id.conLayoutBottom);
         conLayout = findViewById(R.id.constraintLayout);
+        RequestQueue requestQueue;
 
         txtVwDetails = findViewById(R.id.txtVwDetails);
         txtVwLatLong = findViewById(R.id.txtVwLatLong);
@@ -78,8 +80,6 @@ public class Birding extends AppCompatActivity {
             Log.println(Log.ERROR,"btnListeners","Null Pointer");
         }
 
-
-
     }
     public void getLastLocation() {
         // Get last known recent location using new Google Play Services SDK (v11+)
@@ -109,6 +109,10 @@ public class Birding extends AppCompatActivity {
                 txtVwLatLong.setText(e.getMessage().toString());
             }
         });
+    }
+
+    public void volleyRequest(){
+
     }
 
 }
