@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.Status;
@@ -28,7 +30,6 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.android.volley;
 import com.google.android.gms.tasks.Task;
 
 public class Birding extends AppCompatActivity {
@@ -46,7 +47,8 @@ public class Birding extends AppCompatActivity {
         conLayoutTop =findViewById(R.id.consLayoutTop);
         conLayoutBottom = findViewById(R.id.conLayoutBottom);
         conLayout = findViewById(R.id.constraintLayout);
-        RequestQueue requestQueue;
+        
+        RequestQueue requestQueue = Volley.newRequestQueue(this.getApplicationContext());
 
         txtVwDetails = findViewById(R.id.txtVwDetails);
         txtVwLatLong = findViewById(R.id.txtVwLatLong);
