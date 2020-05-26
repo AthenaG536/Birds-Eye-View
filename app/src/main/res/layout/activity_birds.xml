@@ -71,6 +71,10 @@
             android:id="@+id/txtVwDetails"
             android:layout_width="409dp"
             android:layout_height="305dp"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="Details will appear here"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edtTxtSpecies" />
