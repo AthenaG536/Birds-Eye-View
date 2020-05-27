@@ -43,11 +43,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        float zoomLevel = 8.0f;
 
-        // Add a marker in Sydney and move the camera
+        // Add a marker in Hanua Falls and move the camera
         LatLng location = new LatLng(-37.06877, 175.08977);
-        mMap.addMarker(new MarkerOptions().position(location).title("You are here"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+        mMap.addMarker(new MarkerOptions().position(location).title("Hanua Falls"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, zoomLevel));
+
+
+        location = new LatLng(-36.80192, 175.10801);
+        mMap.addMarker(new MarkerOptions().position(location).title("Waiheke Island"));
+
+        location = new LatLng(-36.43212, 174.83222);
+        mMap.addMarker(new MarkerOptions().position(location).title("Kawau Island"));
+        location = new LatLng(-36.83273, 174.42431);
+        mMap.addMarker(new MarkerOptions().position(location).title("Muriwai Gannet Colony"));
+        location = new LatLng(-36.25786, 175.42778);
+        mMap.addMarker(new MarkerOptions().position(location).title("Great Barrier Island"));
+
+        location = new LatLng(-36.60124, 174.88936);
+        mMap.addMarker(new MarkerOptions().position(location).title("Tiritiri Matangi Island"));
     }
 
 }
