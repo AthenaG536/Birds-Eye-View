@@ -201,8 +201,8 @@ public class bird {
     public String toString() {
         String tmpString = "";
         for (ArrayList<String> detail:birdInfo) {
-            if(!detail.get(1).isEmpty()){
-                tmpString += "\t" + detail.get(0) + detail.get(1);
+            if((detail.get(1) != null) && (detail.get(1).toString() != "[]") && (detail.get(1) != "species")){
+                tmpString += "\n\t" + detail.get(0) + detail.get(1);
             }
         }
 

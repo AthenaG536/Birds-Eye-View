@@ -38,7 +38,7 @@
             android:layout_marginTop="37dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Swan"
+            android:text="Tui"
             app:layout_constraintEnd_toStartOf="@+id/btnSearch"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +71,7 @@
             android:id="@+id/txtVwDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
             android:gravity="center"
             android:text="Details will appear here"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +101,7 @@
             android:id="@+id/txtVwYourLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="16dp"
             android:text="Your Location"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -125,29 +126,25 @@
             android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginLeft="35dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginTop="19dp"
             android:text="Continue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txtViewBirdingLocations"
-            app:layout_constraintTop_toBottomOf="@+id/txtVwLatLong" />
+            app:layout_constraintTop_toBottomOf="@+id/btnAddSighting" />
 
         <TextView
             android:id="@+id/txtViewBirdingLocations"
-            android:layout_width="205dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="45dp"
+            android:layout_width="310dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="Want to see popular birding locations in Auckland?"
             android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/btnContinue"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtVwLatLong" />
+            app:layout_constraintTop_toBottomOf="@+id/btnAddSighting" />
 
         <Button
             android:id="@+id/btnRefresh"
@@ -155,12 +152,22 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="31dp"
-            android:text="Refresh"
+            android:layout_marginTop="12dp"
+            android:text="Refresh Location"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/txtVwLatLong"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAddSighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Add Sighting of Tui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtVwLatLong" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
